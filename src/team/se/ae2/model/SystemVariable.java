@@ -1,13 +1,13 @@
 package team.se.ae2.model;
 
-public class Setting {
+public class SystemVariable {
     protected String codeUser;
     protected String codeCourse;
     protected String codeTraining;
 
-    public Setting() {}
+    public SystemVariable() {}
 
-    public Setting(String codeUser, String codeCourse, String codeTraining) {
+    public SystemVariable(String codeUser, String codeCourse, String codeTraining) {
         this.codeUser = codeUser;
         this.codeCourse = codeCourse;
         this.codeTraining = codeTraining;

@@ -1,5 +1,8 @@
-:setting
+:systemVariable
 codeUser=4	codeCourse=2	codeTraining=2
+
+:uiSetting
+boxWidth=20
 
 :user
 id=1	username=classDirector	password=test	role=CLASS_DIRECTOR

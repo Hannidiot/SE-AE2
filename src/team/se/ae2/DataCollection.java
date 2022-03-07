@@ -41,12 +41,12 @@ public class DataCollection {
         return null;
     }
 
-    public void setSetting(Setting setting) {
-        this.setting = setting;
+    public void setSystemVariable(SystemVariable systemVariable) {
+        this.systemVariable = systemVariable;
     }
 
-    public Setting getSetting() {
-        return this.setting;
+    public void setUiSetting(UiSetting uiSetting) {
+        this.uiSetting = uiSetting;
     }
 
     public void addCourse(Course course) {
@@ -89,6 +89,14 @@ public class DataCollection {
         return trainees;
     }
 
+    public SystemVariable getSystemVariable() {
+        return this.systemVariable;
+    }
+
+    public UiSetting getUiSetting() {
+        return uiSetting;
+    }
+
     // Course Models
     protected ArrayList<Course> courses = new ArrayList<>();
     protected ArrayList<CourseRequirement> courseRequirements = new ArrayList<>();
@@ -100,8 +108,11 @@ public class DataCollection {
     protected ArrayList<Training> trainings = new ArrayList<>();
     protected ArrayList<Trainee> trainees = new ArrayList<>();
 
-    // Setting Model
-    protected Setting setting;
+    // SystemVariable Model
+    protected SystemVariable systemVariable;
+
+    // UiSetting Model
+    protected UiSetting uiSetting;
 
     @Override
     public String toString() {
@@ -110,7 +121,8 @@ public class DataCollection {
                 "\nusers=" + users +
                 "\ntrainings=" + trainings +
                 "\ntrainees=" + trainees +
-                "\nsetting=" + setting +
+                "\nsystemVariable=" + systemVariable +
+                "\nuiSetting=" + uiSetting +
                 "" ;
     }
 }

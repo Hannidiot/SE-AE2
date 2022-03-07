@@ -1,4 +1,4 @@
-:setting
+:systemVariable
 code-user=4  code-course=2  code-training=2
 
 :user

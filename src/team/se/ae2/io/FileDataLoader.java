@@ -26,7 +26,7 @@ public class FileDataLoader {
         fileReader.close();
     }
 
-    protected void parseLine(String line, Scanner reader) throws Exception {
+    protected void parseLine(String line, Scanner reader) {
         if (!line.startsWith(":")) return;
 
         String category = line.strip().substring(1);

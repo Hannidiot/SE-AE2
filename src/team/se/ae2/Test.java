@@ -17,7 +17,9 @@ public class Test {
         ArrayList<Training> trainings = new ArrayList<>();
         ArrayList<Trainee> trainees = new ArrayList<>();
 
-        Setting setting = new Setting("4", "2", "2");
+        SystemVariable systemVariable = new SystemVariable("4", "2", "2");
+        UiSetting uiSetting = new UiSetting();
+        uiSetting.setBoxWidth(20);
 
         ClassDirector cd = new ClassDirector("1", "classDirector", "test");
         Administrator admin = new Administrator("2", "admin", "test");
@@ -42,7 +44,8 @@ public class Test {
         FileDataWriter writer = new FileDataWriter();
         try {
             writer.open(testFilePath);
-            writer.writeCategory("setting", setting);
+            writer.writeCategory("systemVariable", systemVariable);
+            writer.writeCategory("uiSetting", uiSetting);
             writer.writeCategoryCollection("user", userList);
             writer.writeCategoryCollection("course", courseList);
             writer.writeCategoryCollection("courseRequirement", courseRequirements);

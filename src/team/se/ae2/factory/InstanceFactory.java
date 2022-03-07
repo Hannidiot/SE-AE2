@@ -10,22 +10,23 @@ public class InstanceFactory {
 
     public static void initInstanceFromDict(Dictionary<String, String> kvPairs, String className) {
         switch (className) {
-            case "setting"-> createSetting(kvPairs);
+            case "systemVariable"-> createSystemVariable(kvPairs);
             case "user"-> createUser(kvPairs);
             case "course"-> createCourse(kvPairs);
             case "courseRequirement"-> createCourseRequirement(kvPairs);
             case "training"-> createTraining(kvPairs);
             case "trainee"-> createTrainee(kvPairs);
+            case "uiSetting" -> createUiSetting(kvPairs);
         }
     }
 
-    private static void createSetting(Dictionary<String, String> kvPairs) {
-        Setting setting = new Setting();
-        setting.setCodeCourse(kvPairs.get("codeCourse"));
-        setting.setCodeTraining(kvPairs.get("codeTraining"));
-        setting.setCodeUser(kvPairs.get("codeUser"));
+    private static void createSystemVariable(Dictionary<String, String> kvPairs) {
+        SystemVariable systemVariable = new SystemVariable();
+        systemVariable.setCodeCourse(kvPairs.get("codeCourse"));
+        systemVariable.setCodeTraining(kvPairs.get("codeTraining"));
+        systemVariable.setCodeUser(kvPairs.get("codeUser"));
 
-        dc.setSetting(setting);
+        dc.setSystemVariable(systemVariable);
     }
 
     private static void createUser(Dictionary<String, String> kvPairs) {
@@ -95,5 +96,15 @@ public class InstanceFactory {
         trainee.setTraining(training);
 
         dc.addTrainee(trainee);
+    }
+
+    private static void createUiSetting(Dictionary<String, String> kvPairs) {
+        UiSetting uiSetting = new UiSetting();
+        String boxWidthStr = kvPairs.get("boxWidth");
+        int boxWidth = Integer.parseInt(boxWidthStr);
+
+        uiSetting.setBoxWidth(boxWidth);
+
+        dc.setUiSetting(uiSetting);
     }
 }
