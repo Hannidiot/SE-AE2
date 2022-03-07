@@ -13,7 +13,7 @@ public class CourseController {
     public boolean addCourseRequirements(Course course, String requirementText, User user) {
         if (!user.getRole().equals(User.Role.ADMINISTRATOR)) return false;
 
-        CourseRequirement cr = new CourseRequirement(requirementText, user, LocalDateTime.now(), course);
+        CourseRequirement cr = new CourseRequirement(requirementText, user, course);
         dc.addCourseRequirement(cr);
         return true;
     }

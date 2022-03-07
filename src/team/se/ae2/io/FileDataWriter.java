@@ -3,7 +3,6 @@ package team.se.ae2.io;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,8 +33,8 @@ public class FileDataWriter {
         try {
             bufferedWriter.write(":" + categoryName + "\n");
 
-            for (int i = 0; i < objs.size(); i++) {
-                bufferedWriter.write(objs.get(i).toString());
+            for (Object obj : objs) {
+                bufferedWriter.write(obj.toString());
                 bufferedWriter.newLine();
             }
 

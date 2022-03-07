@@ -1,15 +1,17 @@
 package team.se.ae2;
 
+import team.se.ae2.io.FileDataLoader;
 import team.se.ae2.io.FileDataWriter;
 import team.se.ae2.model.*;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        String testFilePath = Util.baseDir + "/resources/test.txt";
+        DataCollection dc = DataCollection.getInstance();
         ArrayList<User> userList = new ArrayList<>();
         ArrayList<Course> courseList = new ArrayList<>();
         ArrayList<CourseRequirement> courseRequirements = new ArrayList<>();
@@ -29,10 +31,10 @@ public class Main {
         courseList.add(writing);
 
         CourseRequirement cr =
-                new CourseRequirement("A template requirement", cd, LocalDateTime.now(), writing);
+                new CourseRequirement("A template requirement", cd, writing);
         courseRequirements.add(cr);
 
-        Training training = new Training("1", "test", LocalDateTime.now(), hanni, admin);
+        Training training = new Training("1", "test", hanni, admin);
         trainings.add(training);
 
         Trainee trainee = new Trainee(hanni, training);
@@ -40,7 +42,7 @@ public class Main {
 
         FileDataWriter writer = new FileDataWriter();
         try {
-            writer.open(Util.baseDir + "/resources/test.txt");
+            writer.open(testFilePath);
             writer.writeCategory("setting", setting);
             writer.writeCategoryCollection("user", userList);
             writer.writeCategoryCollection("course", courseList);
@@ -52,5 +54,14 @@ public class Main {
         } finally {
             writer.close();
         }
+
+        FileDataLoader loader = new FileDataLoader();
+        try {
+            loader.load(testFilePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(dc);
     }
 }

@@ -10,10 +10,10 @@ id=3	username=Hanni	password=test	role=TEACHER
 courseName=Writing	courseCode=1	courseTeacher=null
 
 :courseRequirement
-requirementText=A template requirement	creator=1	createTime=2022-03-07T16:44:58.592396	course=1
+requirementText=A template requirement	creator=1	course=1
 
 :training
-trainingCode=1	trainingName=test	trainingTime=2022-03-07T16:44:58.596089	trainer=3	owner=2
+trainingCode=1	trainingName=test	trainer=3	owner=2
 
 :trainee
 trainee=3	training=1

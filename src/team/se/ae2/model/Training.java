@@ -6,16 +6,14 @@ import java.time.format.DateTimeFormatter;
 public class Training {
     protected String trainingCode;
     protected String trainingName;
-    protected LocalDateTime trainingTime;
     protected User trainer;
     protected Administrator owner;
 
     public Training() {}
 
-    public Training(String trainingCode, String trainingName, LocalDateTime trainingTime, User trainer, Administrator owner) {
+    public Training(String trainingCode, String trainingName, User trainer, Administrator owner) {
         this.trainingCode = trainingCode;
         this.trainingName = trainingName;
-        this.trainingTime = trainingTime;
         this.trainer = trainer;
         this.owner = owner;
     }
@@ -34,14 +32,6 @@ public class Training {
 
     public void setTrainingName(String trainingName) {
         this.trainingName = trainingName;
-    }
-
-    public LocalDateTime getTrainingTime() {
-        return trainingTime;
-    }
-
-    public void setTrainingTime(LocalDateTime trainingTime) {
-        this.trainingTime = trainingTime;
     }
 
     public User getTrainer() {
@@ -64,7 +54,6 @@ public class Training {
     public String toString() {
         return "trainingCode=" + trainingCode +
                 "\ttrainingName=" + trainingName +
-                "\ttrainingTime=" + trainingTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) +
                 "\ttrainer=" + trainer.id +
                 "\towner=" + owner.id +
                 "" ;
