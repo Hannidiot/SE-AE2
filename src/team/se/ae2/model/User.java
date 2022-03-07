@@ -50,4 +50,13 @@ public abstract class User {
     public void setId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "id=" + id +
+                "\tusername=" + username +
+                "\tpassword=" + password +
+                "\trole=" + role +
+                "" ;
+    }
 }

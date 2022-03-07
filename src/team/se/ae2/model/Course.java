@@ -1,7 +1,5 @@
 package team.se.ae2.model;
 
-import java.util.ArrayList;
-
 public class Course {
     protected String courseName;
     protected String courseCode;
@@ -12,6 +10,12 @@ public class Course {
         this.courseName = courseName;
         this.courseCode = courseCode;
         this.courseTeacher = null;
+    }
+
+    public Course(String courseName, String courseCode, Teacher teacher) {
+        this.courseName = courseName;
+        this.courseCode = courseCode;
+        this.courseTeacher = teacher;
     }
 
     public String getCourseName() {
@@ -36,5 +40,13 @@ public class Course {
 
     public void setCourseTeacher(Teacher courseTeacher) {
         this.courseTeacher = courseTeacher;
+    }
+
+    @Override
+    public String toString() {
+        return "courseName=" + courseName +
+                "\tcourseCode=" + courseCode +
+                "\tcourseTeacher=" + (courseTeacher == null ? "null" : courseTeacher.id) +
+                "" ;
     }
 }

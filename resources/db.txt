@@ -1,11 +1,19 @@
 :setting
-
-:course
-
-:course_requirement
+code-user=4  code-course=2  code-training=2
 
 :user
+id=1    username=class_director   password=test   role=classDirector
+id=2    username=admin  password=test   role=administrator
+id=3    username=Hanni  password=test   role=teacher
+
+:course
+code=1  courseName=Writing  teacher=null
+
+:course_requirement
+ccode=1 text=a temp requirement text    creator_id=1    create_time=2022-01-02 13:00:00
 
 :training
+code=1  time=2022-01-02 13:00:00    creator_id=1    trainer_id
 
 :trainee
+tcode=1 uid=3   is_check_in=true

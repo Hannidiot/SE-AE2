@@ -1,20 +1,29 @@
 package team.se.ae2.model;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 
 public class Training {
+    protected String trainingCode;
     protected String trainingName;
     protected LocalDateTime trainingTime;
     protected User trainer;
     protected Administrator owner;
 
-    public Training(String trainingName, LocalDateTime trainingTime, User trainer, Administrator owner) {
+    public Training(String trainingCode, String trainingName, LocalDateTime trainingTime, User trainer, Administrator owner) {
+        this.trainingCode = trainingCode;
         this.trainingName = trainingName;
         this.trainingTime = trainingTime;
         this.trainer = trainer;
         this.owner = owner;
+    }
+
+    public String getTrainingCode() {
+        return trainingCode;
+    }
+
+    public void setTrainingCode(String trainingCode) {
+        this.trainingCode = trainingCode;
     }
 
     public String getTrainingName() {
@@ -47,5 +56,15 @@ public class Training {
 
     public void setOwner(Administrator owner) {
         this.owner = owner;
+    }
+
+    @Override
+    public String toString() {
+        return "trainingCode=" + trainingCode +
+                "\ttrainingName=" + trainingName +
+                "\ttrainingTime=" + trainingTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) +
+                "\ttrainer=" + trainer.id +
+                "\towner=" + owner.id +
+                "" ;
     }
 }

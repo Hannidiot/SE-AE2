@@ -2,6 +2,7 @@ package team.se.ae2.model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class CourseRequirement {
     protected String requirementText;
@@ -30,5 +31,14 @@ public class CourseRequirement {
 
     public LocalDateTime getCreateTime() {
         return createTime;
+    }
+
+    @Override
+    public String toString() {
+        return "requirementText=" + requirementText +
+                "\tcreator=" + creator.id +
+                "\tcreateTime=" + createTime.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) +
+                "\tcourse=" + course.courseCode +
+                "" ;
     }
 }

@@ -15,7 +15,9 @@ public class TrainingController {
                                User trainer, User owner) {
         if (!owner.getRole().equals(User.Role.ADMINISTRATOR)) return false;
 
-        Training newTraining = new Training(trainingName, trainingTime, trainer, (Administrator) owner);
+        String trainingCode = "";
+
+        Training newTraining = new Training(trainingCode, trainingName, trainingTime, trainer, (Administrator) owner);
         dc.addTraining(newTraining);
         return true;
     }
