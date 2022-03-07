@@ -10,6 +10,8 @@ public class Training {
     protected User trainer;
     protected Administrator owner;
 
+    public Training() {}
+
     public Training(String trainingCode, String trainingName, LocalDateTime trainingTime, User trainer, Administrator owner) {
         this.trainingCode = trainingCode;
         this.trainingName = trainingName;

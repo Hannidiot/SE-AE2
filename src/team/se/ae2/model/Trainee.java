@@ -4,6 +4,8 @@ public class Trainee {
     protected Teacher trainee;
     protected Training training;
 
+    public Trainee() {}
+
     public Trainee(Teacher trainee, Training training) {
         this.trainee = trainee;
         this.training = training;

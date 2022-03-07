@@ -5,6 +5,8 @@ public class Setting {
     protected String code_course;
     protected String code_training;
 
+    public Setting() {}
+
     public Setting(String code_user, String code_course, String code_training) {
         this.code_user = code_user;
         this.code_course = code_course;

@@ -6,6 +6,8 @@ public class Course {
 
     protected Teacher courseTeacher;
 
+    public Course() {}
+
     public Course(String courseName, String courseCode) {
         this.courseName = courseName;
         this.courseCode = courseCode;

@@ -10,6 +10,8 @@ public class CourseRequirement {
     protected LocalDateTime createTime;
     protected Course course;
 
+    public CourseRequirement() {}
+
     public CourseRequirement(String requirementText, User creator, LocalDateTime createTime, Course course) {
         this.requirementText = requirementText;
         this.creator = creator;
