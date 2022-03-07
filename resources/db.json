@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "course director",
+      "password": "test",
+      "role": "COURSE_DIRECTOR"
+    }
+  ]
+}
