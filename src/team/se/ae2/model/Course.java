@@ -7,21 +7,11 @@ public class Course {
     protected String courseCode;
 
     protected Teacher courseTeacher;
-    protected ArrayList<CourseRequirement> teachingRequirements;
 
     public Course(String courseName, String courseCode) {
         this.courseName = courseName;
         this.courseCode = courseCode;
         this.courseTeacher = null;
-        this.teachingRequirements = new ArrayList<>();
-    }
-
-    public void addRequirement(CourseRequirement cr) {
-        teachingRequirements.add(cr);
-    }
-
-    public void removeRequirement(CourseRequirement cr) {
-
     }
 
     public String getCourseName() {

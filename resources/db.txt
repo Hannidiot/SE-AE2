@@ -1,0 +1,11 @@
+:setting
+
+:course
+
+:course_requirement
+
+:user
+
+:training
+
+:trainee

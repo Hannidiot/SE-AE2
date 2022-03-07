@@ -1,4 +1,4 @@
-package team.se.ae2.io;
+package team.se.ae2;
 
 import team.se.ae2.model.*;
 
@@ -28,12 +28,20 @@ public class DataCollection {
         this.courses.add(course);
     }
 
+    public void addCourseRequirement(CourseRequirement cr) {
+        this.courseRequirements.add(cr);
+    }
+
     public void addUser(User user) {
         this.users.add(user);
     }
 
     public void addTraining(Training training) {
         this.trainings.add(training);
+    }
+
+    public void addTrainee(Teacher trainee) {
+        this.trainees.add(trainee);
     }
 
     public ArrayList<Course> getCourses() {
@@ -48,12 +56,22 @@ public class DataCollection {
         return trainings;
     }
 
+    public ArrayList<CourseRequirement> getCourseRequirements() {
+        return courseRequirements;
+    }
+
+    public ArrayList<Teacher> getTrainees() {
+        return trainees;
+    }
+
     // Course Models
     protected ArrayList<Course> courses;
+    protected ArrayList<CourseRequirement> courseRequirements;
 
     // User Models
     protected ArrayList<User> users;
 
     // Training Models
     protected ArrayList<Training> trainings;
+    protected ArrayList<Teacher> trainees;
 }

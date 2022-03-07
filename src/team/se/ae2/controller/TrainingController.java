@@ -1,6 +1,6 @@
 package team.se.ae2.controller;
 
-import team.se.ae2.io.DataCollection;
+import team.se.ae2.DataCollection;
 import team.se.ae2.model.Administrator;
 import team.se.ae2.model.Teacher;
 import team.se.ae2.model.Training;
@@ -23,7 +23,7 @@ public class TrainingController {
     public boolean addTrainee2Training(Training training, Teacher trainee) {
         // todo: add check here
 
-        training.addTrainee(trainee);
+        dc.addTrainee(trainee);
         return true;
     }
 }

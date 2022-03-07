@@ -1,6 +1,6 @@
 package team.se.ae2.controller;
 
-import team.se.ae2.io.DataCollection;
+import team.se.ae2.DataCollection;
 import team.se.ae2.model.Teacher;
 
 public class EnrollController {

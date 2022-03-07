@@ -7,24 +7,14 @@ import java.util.Date;
 public class Training {
     protected String trainingName;
     protected LocalDateTime trainingTime;
-    protected ArrayList<Teacher> trainees;
     protected User trainer;
     protected Administrator owner;
 
     public Training(String trainingName, LocalDateTime trainingTime, User trainer, Administrator owner) {
         this.trainingName = trainingName;
         this.trainingTime = trainingTime;
-        this.trainees = new ArrayList<>();
         this.trainer = trainer;
         this.owner = owner;
-    }
-
-    public void addTrainee(Teacher trainee) {
-        trainees.add(trainee);
-    }
-
-    public void removeTrainee(Teacher trainee) {
-        trainees.remove(trainee);
     }
 
     public String getTrainingName() {

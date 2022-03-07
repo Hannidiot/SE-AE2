@@ -7,11 +7,13 @@ public class CourseRequirement {
     protected String requirementText;
     protected User creator;
     protected LocalDateTime createTime;
+    protected Course course;
 
-    public CourseRequirement(String requirementText, User creator, LocalDateTime createTime) {
+    public CourseRequirement(String requirementText, User creator, LocalDateTime createTime, Course course) {
         this.requirementText = requirementText;
         this.creator = creator;
         this.createTime = createTime;
+        this.course = course;
     }
 
     public void setRequirementText(String requirementText) {
