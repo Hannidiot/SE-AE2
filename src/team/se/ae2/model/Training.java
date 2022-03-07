@@ -1,16 +1,17 @@
 package team.se.ae2.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Training {
     protected String trainingName;
-    protected Date trainingTime;
+    protected LocalDateTime trainingTime;
     protected ArrayList<Teacher> trainees;
     protected User trainer;
     protected Administrator owner;
 
-    public Training(String trainingName, Date trainingTime, User trainer, Administrator owner) {
+    public Training(String trainingName, LocalDateTime trainingTime, User trainer, Administrator owner) {
         this.trainingName = trainingName;
         this.trainingTime = trainingTime;
         this.trainees = new ArrayList<>();
@@ -18,20 +19,12 @@ public class Training {
         this.owner = owner;
     }
 
-    // todo: refactor the parameter with String
-    public boolean addTrainee(Teacher trainee) {
-        if (trainees.contains(trainee)) return false;
-
+    public void addTrainee(Teacher trainee) {
         trainees.add(trainee);
-        return true;
     }
 
-    // todo: refactor the parameter with String
-    public boolean removeTrainee(Teacher trainee) {
-        if (!trainees.contains(trainee)) return false;
-
+    public void removeTrainee(Teacher trainee) {
         trainees.remove(trainee);
-        return true;
     }
 
     public String getTrainingName() {
@@ -42,11 +35,11 @@ public class Training {
         this.trainingName = trainingName;
     }
 
-    public Date getTrainingTime() {
+    public LocalDateTime getTrainingTime() {
         return trainingTime;
     }
 
-    public void setTrainingTime(Date trainingTime) {
+    public void setTrainingTime(LocalDateTime trainingTime) {
         this.trainingTime = trainingTime;
     }
 
