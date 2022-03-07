@@ -5,10 +5,9 @@ import team.se.ae2.io.FileDataWriter;
 import team.se.ae2.model.*;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Main {
+public class Test {
     public static void main(String[] args) {
         String testFilePath = Util.baseDir + "/resources/test.txt";
         DataCollection dc = DataCollection.getInstance();

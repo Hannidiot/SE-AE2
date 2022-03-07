@@ -5,8 +5,6 @@ import team.se.ae2.model.Course;
 import team.se.ae2.model.CourseRequirement;
 import team.se.ae2.model.User;
 
-import java.time.LocalDateTime;
-
 public class CourseController {
     protected DataCollection dc = DataCollection.getInstance();
 
