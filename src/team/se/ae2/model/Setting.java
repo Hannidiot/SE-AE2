@@ -1,47 +1,47 @@
 package team.se.ae2.model;
 
 public class Setting {
-    protected String code_user;
-    protected String code_course;
-    protected String code_training;
+    protected String codeUser;
+    protected String codeCourse;
+    protected String codeTraining;
 
     public Setting() {}
 
-    public Setting(String code_user, String code_course, String code_training) {
-        this.code_user = code_user;
-        this.code_course = code_course;
-        this.code_training = code_training;
+    public Setting(String codeUser, String codeCourse, String codeTraining) {
+        this.codeUser = codeUser;
+        this.codeCourse = codeCourse;
+        this.codeTraining = codeTraining;
     }
 
-    public String getCode_user() {
-        return code_user;
+    public String getCodeUser() {
+        return codeUser;
     }
 
-    public void setCode_user(String code_user) {
-        this.code_user = code_user;
+    public void setCodeUser(String codeUser) {
+        this.codeUser = codeUser;
     }
 
-    public String getCode_course() {
-        return code_course;
+    public String getCodeCourse() {
+        return codeCourse;
     }
 
-    public void setCode_course(String code_course) {
-        this.code_course = code_course;
+    public void setCodeCourse(String codeCourse) {
+        this.codeCourse = codeCourse;
     }
 
-    public String getCode_training() {
-        return code_training;
+    public String getCodeTraining() {
+        return codeTraining;
     }
 
-    public void setCode_training(String code_training) {
-        this.code_training = code_training;
+    public void setCodeTraining(String codeTraining) {
+        this.codeTraining = codeTraining;
     }
 
     @Override
     public String toString() {
-        return "code_user=" + code_user +
-                "\tcode_course=" + code_course +
-                "\tcode_training=" + code_training +
+        return "codeUser=" + codeUser +
+                "\tcodeCourse=" + codeCourse +
+                "\tcodeTraining=" + codeTraining +
                 "" ;
     }
 }
