@@ -49,6 +49,14 @@ public class DataCollection {
         this.uiSetting = uiSetting;
     }
 
+    public void userLogin(User user) {
+        this.loginUser = user;
+    }
+
+    public void userLogout() {
+        this.loginUser = null;
+    }
+
     public void addCourse(Course course) {
         this.courses.add(course);
     }
@@ -97,6 +105,10 @@ public class DataCollection {
         return uiSetting;
     }
 
+    public User getLoginUser() {
+        return loginUser;
+    }
+
     // Course Models
     protected ArrayList<Course> courses = new ArrayList<>();
     protected ArrayList<CourseRequirement> courseRequirements = new ArrayList<>();
@@ -113,6 +125,9 @@ public class DataCollection {
 
     // UiSetting Model
     protected UiSetting uiSetting;
+
+    // Context
+    protected User loginUser;
 
     @Override
     public String toString() {
