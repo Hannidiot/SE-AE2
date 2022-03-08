@@ -1,5 +1,7 @@
 package team.se.ae2.ui;
 
+import team.se.ae2.controller.LoginController;
+
 public class MenuFuncs {
     public static class Back2RootMenuFunc implements IMenuItem {
         private final static Back2RootMenuFunc instance = new Back2RootMenuFunc();
@@ -43,13 +45,15 @@ public class MenuFuncs {
         private static final LogoutMenuFunc instance = new LogoutMenuFunc();
         private LogoutMenuFunc() {}
 
+        private final LoginController loginController = new LoginController();
+
         public static LogoutMenuFunc getInstance() {
             return instance;
         }
 
         @Override
         public void onSelectMenuItem(CommandLineUi ui) {
-
+            loginController.logout();
             ui.switchTo(ui.getRoot());
         }
 

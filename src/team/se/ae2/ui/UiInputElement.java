@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/*
+    a simple and basic element to get user input from command line
+ */
 public class UiInputElement extends UiBase {
     protected String defaultHint;
     protected InputStreamReader inputStream;

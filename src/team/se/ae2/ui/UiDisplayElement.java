@@ -1,8 +1,8 @@
 package team.se.ae2.ui;
 
-import team.se.ae2.DataCollection;
-import team.se.ae2.model.UiSetting;
-
+/*
+    a simple and basic element to show text in terminal
+ */
 public class UiDisplayElement extends UiBase {
     protected String text;
 

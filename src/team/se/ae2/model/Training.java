@@ -1,8 +1,5 @@
 package team.se.ae2.model;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 public class Training {
     protected String trainingCode;
     protected String trainingName;

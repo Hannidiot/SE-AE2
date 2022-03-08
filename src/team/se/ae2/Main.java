@@ -6,7 +6,7 @@ import team.se.ae2.ui.page.MainPage;
 
 public class Main {
     public static void main(String[] args) {
-        String testFilePath = "/Users/minhao/Documents/GLA Course/Software Engineering/SE-AE2" + "/resources/test.txt";
+        String testFilePath = Util.baseDir + "/resources/test.txt";
 
         FileDataLoader loader = new FileDataLoader();
         try {

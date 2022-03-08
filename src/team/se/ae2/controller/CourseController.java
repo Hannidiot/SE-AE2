@@ -17,7 +17,6 @@ public class CourseController {
     }
 
     public boolean addCourse(String courseCode, String courseName) {
-        // todo: check if course in course list
 
         Course newCourse = new Course(courseName, courseCode);
         dc.addCourse(newCourse);

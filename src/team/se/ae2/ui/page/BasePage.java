@@ -1,7 +1,6 @@
 package team.se.ae2.ui.page;
 
 import team.se.ae2.ui.CommandLineUi;
-import team.se.ae2.ui.IInputResolver;
 import team.se.ae2.ui.IMenuItem;
 import team.se.ae2.ui.IMenuPage;
 

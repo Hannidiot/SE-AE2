@@ -11,13 +11,13 @@ import java.util.ArrayList;
    all business data.
  */
 public class DataCollection {
-    private static DataCollection _dataCollection = null;
+    private static DataCollection instance = null;
 
     public static DataCollection getInstance() {
-        if (_dataCollection == null) {
-            _dataCollection = new DataCollection();
+        if (instance == null) {
+            instance = new DataCollection();
         }
-        return _dataCollection;
+        return instance;
     }
 
     public User getUserById(String id) {

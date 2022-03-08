@@ -1,6 +1,8 @@
 package team.se.ae2.ui.page;
 
 import team.se.ae2.controller.LoginController;
+import team.se.ae2.model.User;
+import team.se.ae2.ui.IPermissionControl;
 import team.se.ae2.ui.MenuFuncs;
 
 public class LoginPage extends BasePage {

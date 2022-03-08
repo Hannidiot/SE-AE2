@@ -1,8 +1,6 @@
 package team.se.ae2.io;
 
-import team.se.ae2.DataCollection;
 import team.se.ae2.factory.InstanceFactory;
-import team.se.ae2.model.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;

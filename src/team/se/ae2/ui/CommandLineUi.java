@@ -1,12 +1,16 @@
 package team.se.ae2.ui;
 
 import team.se.ae2.DataCollection;
+import team.se.ae2.model.User;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
+/*
+    Ui is composed of HEADER_BOX, CONTENT_BOX, MENU_BOX and INPUT_BOX.
+    Since all pages share same ui element, use a centralized class to control how the ui will behave.
+ */
 public class CommandLineUi {
     protected UiDisplayElement header, content, menu;
     protected UiInputElement inputBox;
@@ -28,12 +32,24 @@ public class CommandLineUi {
         switchTo(root);
     }
 
+    /*
+        switch to the target page
+     */
     public void switchTo(IMenuPage page) {
         this.current_page = page;
         page.registerOnUiController(this);
         resolveMenu();
     }
 
+    /*
+        the main loop that the ui runs
+
+        every time it receives some input, first the internal resolveNavigation function will resolve the input and
+        figure out whether it targets to another page
+
+        after it is resolved by internal resolver, the page resolver will get the input and execute
+        customized logic defined by the page.
+     */
     public void run() {
         String input;
         while (isRunning) {
@@ -44,16 +60,41 @@ public class CommandLineUi {
         }
     }
 
+    /*
+        terminate the ui
+     */
     public void exit() {
         this.isRunning = false;
         inputBox.close();
     }
 
+    /*
+        resolve how the menu is shown
+
+        generate a dictionary for resolveNavigation() function to use
+     */
     protected void resolveMenu() {
         StringBuilder menuBuilder = new StringBuilder();
         num2MenuMap = new Hashtable<>();
         ArrayList<IMenuItem> menuItems = this.current_page.getMenuItems();
+
         for (int i = 0; i < menuItems.size(); i++) {
+
+            // check if the user has the permission to access the page
+            if (dc.getLoginUser() != null && menuItems.get(i) instanceof IPermissionControl) {
+                boolean flag = false;
+                User.Role[] permittedRoles = ((IPermissionControl) menuItems.get(i)).getPermittedRoles();
+                for (User.Role role :
+                        permittedRoles) {
+                    if (role == dc.getLoginUser().getRole()) {
+                        flag = true;
+                        break;
+                    }
+                }
+
+                if (!flag) continue;
+            }
+
             menuBuilder.append(i)
                     .append(". ")
                     .append(menuItems.get(i).getMenuItemDescription());
@@ -89,6 +130,11 @@ public class CommandLineUi {
         this.header.print();
     }
 
+    /*
+        intend to clear the terminal, however the command does not work under MacOS
+
+        so use 3 new-line as a dirty implementation :(
+     */
     protected void refresh() {
         System.out.println();
         System.out.println();
