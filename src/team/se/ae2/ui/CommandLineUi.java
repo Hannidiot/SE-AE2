@@ -90,11 +90,14 @@ public class CommandLineUi {
     }
 
     protected void refresh() {
-        try {
-            Runtime.getRuntime().exec("clear");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+//        try {
+//            Runtime.getRuntime().exec("clear");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     // Getter and Setter

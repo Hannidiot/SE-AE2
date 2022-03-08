@@ -4,7 +4,12 @@ import team.se.ae2.model.*;
 
 import java.util.ArrayList;
 
-// a singleton class to store all the data in memory
+/* a singleton class to store all the data in memory
+
+   The implementation is a bit dirty. In concept, this class is a combination of database and memory.
+   It is better to remove some data from here to a new class, like context info, and only keep it to store
+   all business data.
+ */
 public class DataCollection {
     private static DataCollection _dataCollection = null;
 
