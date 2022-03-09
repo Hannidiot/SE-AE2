@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public class CourseRequirement {
+public class CourseRequirement implements IDbModel {
     protected String requirementText;
     protected User creator;
     protected Course course;
@@ -43,5 +43,10 @@ public class CourseRequirement {
                 "\tcreator=" + creator.id +
                 "\tcourse=" + course.courseCode +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

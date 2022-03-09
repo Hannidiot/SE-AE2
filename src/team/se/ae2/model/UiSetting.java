@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public class UiSetting {
+public class UiSetting implements IDbModel {
     protected int boxWidth;
 
     public UiSetting() {}
@@ -17,5 +17,10 @@ public class UiSetting {
     public String toString() {
         return "boxWidth=" + boxWidth +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

@@ -1,13 +1,13 @@
 package team.se.ae2.io;
 
-import org.jetbrains.annotations.NotNull;
+import team.se.ae2.model.IDbModel;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
-public class FileDataWriter {
+public class FileDataWriter implements IDataWriter {
     protected FileWriter writer;
     protected BufferedWriter bufferedWriter;
 
@@ -16,11 +16,11 @@ public class FileDataWriter {
         bufferedWriter = new BufferedWriter(writer);
     }
 
-    public void writeCategory(String categoryName, @NotNull Object obj) {
+    public void write(String categoryName, IDbModel dbModel) {
         try {
             bufferedWriter.write(":" + categoryName + "\n");
 
-            bufferedWriter.write(obj.toString());
+            bufferedWriter.write(dbModel.getText());
             bufferedWriter.newLine();
 
             bufferedWriter.newLine();
@@ -29,12 +29,12 @@ public class FileDataWriter {
         }
     }
 
-    public void writeCategoryCollection(String categoryName, @NotNull ArrayList objs) {
+    public void writeBatch(String categoryName, List<IDbModel> dbModels) {
         try {
             bufferedWriter.write(":" + categoryName + "\n");
 
-            for (Object obj : objs) {
-                bufferedWriter.write(obj.toString());
+            for (IDbModel dbModel : dbModels) {
+                bufferedWriter.write(dbModel.getText());
                 bufferedWriter.newLine();
             }
 

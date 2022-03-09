@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public class Trainee {
+public class Trainee implements IDbModel {
     protected Teacher trainee;
     protected Training training;
 
@@ -32,5 +32,10 @@ public class Trainee {
         return "trainee=" + trainee.id +
                 "\ttraining=" + training.trainingCode +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

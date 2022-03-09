@@ -6,16 +6,17 @@ import team.se.ae2.model.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
         String testFilePath = Util.baseDir + "/resources/test.txt";
         DataCollection dc = DataCollection.getInstance();
-        ArrayList<User> userList = new ArrayList<>();
-        ArrayList<Course> courseList = new ArrayList<>();
-        ArrayList<CourseRequirement> courseRequirements = new ArrayList<>();
-        ArrayList<Training> trainings = new ArrayList<>();
-        ArrayList<Trainee> trainees = new ArrayList<>();
+        List<IDbModel> userList = new ArrayList<>();
+        List<IDbModel> courseList = new ArrayList<>();
+        List<IDbModel> courseRequirements = new ArrayList<>();
+        List<IDbModel> trainings = new ArrayList<>();
+        List<IDbModel> trainees = new ArrayList<>();
 
         SystemVariable systemVariable = new SystemVariable("4", "2", "2");
         UiSetting uiSetting = new UiSetting();
@@ -44,22 +45,22 @@ public class Test {
         FileDataWriter writer = new FileDataWriter();
         try {
             writer.open(testFilePath);
-            writer.writeCategory("systemVariable", systemVariable);
-            writer.writeCategory("uiSetting", uiSetting);
-            writer.writeCategoryCollection("user", userList);
-            writer.writeCategoryCollection("course", courseList);
-            writer.writeCategoryCollection("courseRequirement", courseRequirements);
-            writer.writeCategoryCollection("training", trainings);
-            writer.writeCategoryCollection("trainee", trainees);
+            writer.write("systemVariable", systemVariable);
+            writer.write("uiSetting", uiSetting);
+            writer.writeBatch("user", userList);
+            writer.writeBatch("course", courseList);
+            writer.writeBatch("courseRequirement", courseRequirements);
+            writer.writeBatch("training", trainings);
+            writer.writeBatch("trainee", trainees);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             writer.close();
         }
 
-        FileDataLoader loader = new FileDataLoader();
+        FileDataLoader loader = new FileDataLoader(testFilePath);
         try {
-            loader.load(testFilePath);
+            loader.load();
         } catch (Exception e) {
             e.printStackTrace();
         }

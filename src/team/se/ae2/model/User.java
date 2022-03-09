@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public abstract class User {
+public abstract class User implements IDbModel {
     public enum Role {
         TEACHER,
         CLASS_DIRECTOR,
@@ -60,5 +60,10 @@ public abstract class User {
                 "\tpassword=" + password +
                 "\trole=" + role +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

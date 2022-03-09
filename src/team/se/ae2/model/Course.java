@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public class Course {
+public class Course implements IDbModel {
     protected String courseName;
     protected String courseCode;
 
@@ -50,5 +50,10 @@ public class Course {
                 "\tcourseCode=" + courseCode +
                 "\tcourseTeacher=" + (courseTeacher == null ? "null" : courseTeacher.id) +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

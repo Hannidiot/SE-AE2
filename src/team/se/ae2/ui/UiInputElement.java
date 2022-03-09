@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
     a simple and basic element to get user input from command line
  */
 public class UiInputElement extends UiBase {
-    protected String defaultHint;
     protected InputStreamReader inputStream;
     protected BufferedReader reader;
 

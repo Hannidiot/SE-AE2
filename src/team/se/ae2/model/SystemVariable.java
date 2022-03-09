@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public class SystemVariable {
+public class SystemVariable implements IDbModel {
     protected String codeUser;
     protected String codeCourse;
     protected String codeTraining;
@@ -43,5 +43,10 @@ public class SystemVariable {
                 "\tcodeCourse=" + codeCourse +
                 "\tcodeTraining=" + codeTraining +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

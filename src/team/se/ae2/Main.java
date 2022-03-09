@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
         String testFilePath = Util.baseDir + "/resources/test.txt";
 
-        FileDataLoader loader = new FileDataLoader();
+        FileDataLoader loader = new FileDataLoader(testFilePath);
         try {
-            loader.load(testFilePath);
+            loader.load();
         } catch (Exception e) {
             e.printStackTrace();
         }

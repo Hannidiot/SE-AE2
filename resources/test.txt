@@ -2,7 +2,7 @@
 codeUser=4	codeCourse=2	codeTraining=2
 
 :uiSetting
-boxWidth=80
+boxWidth=20
 
 :user
 id=1	username=classDirector	password=test	role=CLASS_DIRECTOR
@@ -20,5 +20,4 @@ trainingCode=1	trainingName=test	trainer=3	owner=2
 
 :trainee
 trainee=3	training=1
-trainee=1   training=1
 

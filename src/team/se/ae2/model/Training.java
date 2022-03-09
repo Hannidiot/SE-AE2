@@ -1,6 +1,6 @@
 package team.se.ae2.model;
 
-public class Training {
+public class Training implements IDbModel {
     protected String trainingCode;
     protected String trainingName;
     protected User trainer;
@@ -54,5 +54,10 @@ public class Training {
                 "\ttrainer=" + trainer.id +
                 "\towner=" + owner.id +
                 "" ;
+    }
+
+    @Override
+    public String getText() {
+        return toString();
     }
 }

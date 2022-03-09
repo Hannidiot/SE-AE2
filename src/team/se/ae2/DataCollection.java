@@ -7,8 +7,8 @@ import java.util.ArrayList;
 /* a singleton class to store all the data in memory
 
    The implementation is a bit dirty. In concept, this class is a combination of database and memory.
-   It is better to remove some data from here to a new class, like context info, and only keep it to store
-   all business data.
+   It is better to remove some data from here to a new class, like ui settings which ought to be stored
+   in the local file, and only keep this class to store all business data.
  */
 public class DataCollection {
     private static DataCollection instance = null;
