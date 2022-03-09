@@ -1,8 +1,12 @@
 package team.se.ae2.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course implements IDbModel {
     protected String courseName;
     protected String courseCode;
+    protected List<CourseRequirement> courseRequirements = new ArrayList<>();
 
     protected Teacher courseTeacher;
 

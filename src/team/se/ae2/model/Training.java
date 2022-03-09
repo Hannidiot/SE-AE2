@@ -1,10 +1,14 @@
 package team.se.ae2.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Training implements IDbModel {
     protected String trainingCode;
     protected String trainingName;
     protected User trainer;
     protected Administrator owner;
+    protected List<Trainee> trainees = new ArrayList<>();
 
     public Training() {}
 
