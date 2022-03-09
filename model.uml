@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>team.se.ae2.model</OriginalElement>
+  <nodes>
+    <node x="1109.7175324675325" y="229.0">team.se.ae2.model.UiSetting</node>
+    <node x="830.672077922078" y="44.5">team.se.ae2.model.IDbModel</node>
+    <node x="428.71753246753246" y="761.0">team.se.ae2.model.CourseRequirement</node>
+    <node x="204.17207792207796" y="416.0">team.se.ae2.model.Teacher</node>
+    <node x="303.23701298701303" y="196.0">team.se.ae2.model.User</node>
+    <node x="656.7175324675325" y="772.0">team.se.ae2.model.Trainee</node>
+    <node x="284.42207792207796" y="521.0">team.se.ae2.model.Course</node>
+    <node x="808.172077922078" y="207.0">team.se.ae2.model.SystemVariable</node>
+    <node x="264.9036796536797" y="0.0">team.se.ae2.model.User.Role</node>
+    <node x="0.0" y="416.0">team.se.ae2.model.ClassDirector</node>
+    <node x="470.92207792207796" y="416.0">team.se.ae2.model.Administrator</node>
+    <node x="648.422077922078" y="510.0">team.se.ae2.model.Training</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="team.se.ae2.model.CourseRequirement" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="52.0" y="-72.0" />
+      <point x="584.7175324675325" y="730.0" />
+      <point x="990.672077922078" y="730.0" />
+      <point x="990.672077922078" y="170.0" />
+      <point x="894.172077922078" y="170.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.UiSetting" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="1184.7175324675325" y="170.0" />
+      <point x="894.172077922078" y="170.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.Training" target="team.se.ae2.model.User" relationship="TO_ONE">
+      <point x="6.5779220779220395" y="-95.5" />
+      <point x="749.0" y="389.0" />
+      <point x="417.23701298701303" y="389.0" />
+      <point x="38.0" y="83.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Training" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="47.0" y="-94.5" />
+      <point x="789.422077922078" y="488.0" />
+      <point x="797.672077922078" y="488.0" />
+      <point x="797.672077922078" y="170.0" />
+      <point x="894.172077922078" y="170.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.CourseRequirement" target="team.se.ae2.model.ClassDirector" relationship="TO_ONE">
+      <point x="-92.71753246753246" y="-70.0" />
+      <point x="440.0" y="740.0" />
+      <point x="79.0" y="740.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="team.se.ae2.model.User" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="50.666666666666686" y="-83.0" />
+      <point x="429.9036796536797" y="170.0" />
+      <point x="894.172077922078" y="170.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.ClassDirector" target="team.se.ae2.model.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="79.0" y="394.0" />
+      <point x="261.17207792207796" y="394.0" />
+      <point x="261.17207792207796" y="384.0" />
+      <point x="341.23701298701303" y="384.0" />
+      <point x="-38.0" y="83.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Trainee" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="37.5" y="-61.0" />
+      <point x="769.2175324675325" y="740.0" />
+      <point x="1099.2175324675325" y="740.0" />
+      <point x="1099.2175324675325" y="170.0" />
+      <point x="894.172077922078" y="170.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.Course" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="86.0" y="-83.5" />
+      <point x="542.422077922078" y="478.0" />
+      <point x="669.172077922078" y="478.0" />
+      <point x="669.172077922078" y="170.0" />
+      <point x="894.172077922078" y="170.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.SystemVariable" target="team.se.ae2.model.IDbModel" relationship="REALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.model.Course" target="team.se.ae2.model.Teacher" relationship="TO_ONE">
+      <point x="-86.0" y="-83.5" />
+      <point x="370.42207792207796" y="488.0" />
+      <point x="292.0" y="488.0" />
+      <point x="30.82792207792204" y="17.0" />
+    </edge>
+    <edge source="team.se.ae2.model.CourseRequirement" target="team.se.ae2.model.Course" relationship="TO_ONE">
+      <point x="-52.0" y="-72.0" />
+      <point x="480.71753246753246" y="748.0" />
+      <point x="480.0" y="748.0" />
+      <point x="23.57792207792204" y="88.5" />
+    </edge>
+    <edge source="team.se.ae2.model.Trainee" target="team.se.ae2.model.Teacher" relationship="TO_ONE">
+      <point x="-37.5" y="-61.0" />
+      <point x="694.2175324675325" y="720.0" />
+      <point x="261.17207792207796" y="720.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Administrator" target="team.se.ae2.model.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="549.922077922078" y="394.0" />
+      <point x="261.17207792207796" y="394.0" />
+      <point x="261.17207792207796" y="384.0" />
+      <point x="341.23701298701303" y="384.0" />
+      <point x="-38.0" y="83.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Training" target="team.se.ae2.model.Administrator" relationship="TO_ONE">
+      <point x="-47.0" y="-94.5" />
+      <point x="695.422077922078" y="468.0" />
+      <point x="549.922077922078" y="468.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Course" target="team.se.ae2.model.CourseRequirement" relationship="TO_MANY">
+      <point x="49.57792207792204" y="81.5" />
+      <point x="506.0" y="695.0" />
+      <point x="505.71753246753246" y="695.0" />
+      <point x="505.71753246753246" y="748.0" />
+      <point x="505.0" y="748.0" />
+      <point x="-27.717532467532465" y="-65.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Trainee" target="team.se.ae2.model.Training" relationship="TO_ONE">
+      <point x="10.282467532467535" y="-61.0" />
+      <point x="742.0" y="740.0" />
+      <point x="742.422077922078" y="740.0" />
+      <point x="742.422077922078" y="720.0" />
+      <point x="742.422077922078" y="720.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.model.Teacher" target="team.se.ae2.model.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.0" />
+      <point x="261.17207792207796" y="384.0" />
+      <point x="341.23701298701303" y="384.0" />
+      <point x="-38.0" y="83.0" />
+    </edge>
+    <edge source="team.se.ae2.model.User.Role" target="team.se.ae2.model.User" relationship="INNER_CLASS">
+      <point x="44.5" y="72.0" />
+      <point x="398.4036796536797" y="170.0" />
+      <point x="379.23701298701303" y="170.0" />
+      <point x="0.0" y="-83.0" />
+    </edge>
+    <edge source="team.se.ae2.model.Training" target="team.se.ae2.model.Trainee" relationship="TO_MANY">
+      <point x="19.57792207792204" y="92.5" />
+      <point x="760.0" y="697.0" />
+      <point x="760.0" y="740.0" />
+      <point x="28.282467532467535" y="-55.0" />
+    </edge>
+    <edge source="team.se.ae2.model.User" target="team.se.ae2.model.User.Role" relationship="TO_ONE">
+      <point x="-50.66666666666663" y="-83.0" />
+      <point x="328.5703463203464" y="170.0" />
+      <point x="309.4036796536797" y="170.0" />
+      <point x="-44.5" y="72.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="630.0" y="452.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

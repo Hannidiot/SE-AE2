@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>team.se.ae2.io</OriginalElement>
+  <nodes>
+    <node x="357.0" y="110.0">team.se.ae2.io.FileDataLoader</node>
+    <node x="406.0" y="-7.5">team.se.ae2.io.IDataLoader</node>
+    <node x="-9.5" y="117.0">team.se.ae2.io.FileDataWriter</node>
+    <node x="-9.5" y="-18.5">team.se.ae2.io.IDataWriter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="team.se.ae2.io.FileDataLoader" target="team.se.ae2.io.IDataLoader" relationship="REALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.io.FileDataWriter" target="team.se.ae2.io.IDataWriter" relationship="REALIZATION">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+  </edges>
+  <settings layout="Directed (Bottom to Top)" zoom="1.0" showDependencies="false" x="296.5" y="132.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
