@@ -1,6 +1,7 @@
 package team.se.ae2.controller;
 
 import team.se.ae2.DataCollection;
+import team.se.ae2.model.ClassDirector;
 import team.se.ae2.model.Course;
 import team.se.ae2.model.CourseRequirement;
 import team.se.ae2.model.User;
@@ -8,7 +9,7 @@ import team.se.ae2.model.User;
 public class CourseController {
     protected DataCollection dc = DataCollection.getInstance();
 
-    public boolean addCourseRequirements(Course course, String requirementText, User user) {
+    public boolean addCourseRequirements(Course course, String requirementText, ClassDirector user) {
         if (!user.getRole().equals(User.Role.ADMINISTRATOR)) return false;
 
         CourseRequirement cr = new CourseRequirement(requirementText, user, course);

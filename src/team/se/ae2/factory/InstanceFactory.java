@@ -60,7 +60,7 @@ public class InstanceFactory {
         Course course = dc.getCourseById(courseId);
 
         String creatorId = kvPairs.get("creator");
-        User creator = dc.getUserById(creatorId);
+        ClassDirector creator = (ClassDirector) dc.getUserById(creatorId);
 
         cr.setRequirementText(kvPairs.get("requirementText"));
         cr.setCourse(course);

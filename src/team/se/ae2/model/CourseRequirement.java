@@ -2,18 +2,18 @@ package team.se.ae2.model;
 
 public class CourseRequirement implements IDbModel {
     protected String requirementText;
-    protected User creator;
+    protected ClassDirector creator;
     protected Course course;
 
     public CourseRequirement() {}
 
-    public CourseRequirement(String requirementText, User creator, Course course) {
+    public CourseRequirement(String requirementText, ClassDirector creator, Course course) {
         this.requirementText = requirementText;
         this.creator = creator;
         this.course = course;
     }
 
-    public void setCreator(User creator) {
+    public void setCreator(ClassDirector creator) {
         this.creator = creator;
     }
 

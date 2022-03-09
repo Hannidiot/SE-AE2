@@ -7,6 +7,9 @@ public interface IDbModel {
     // for writing object to text file, implement this method
     String getText();
 
+    // for writing object to csv file, implement this method
+//    String getCsvText();
+
     // for writing to database file, implement this method
 //    String createSelectAllSql();
 }
