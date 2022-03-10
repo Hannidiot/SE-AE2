@@ -26,6 +26,7 @@ public class CourseReqAddPage extends BasePage implements IPermissionControl {
         }
 
         String courseRequirement = this.ui.getInput("Please input course requirement");
+
         if (controller.addCourseRequirement(course, courseRequirement, dc.getLoginUser())) {
             ui.setContentText("add course requirement success");
         }
@@ -44,6 +45,6 @@ public class CourseReqAddPage extends BasePage implements IPermissionControl {
 
     @Override
     public void init() {
-        this.ui.setDefaultHint("Please input course code");
+        this.ui.setDefaultHint("Please input course name");
     }
 }
