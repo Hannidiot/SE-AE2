@@ -10,6 +10,8 @@ public class MainPage extends BasePage {
     protected DataCollection dc = DataCollection.getInstance();
     protected LoginPage loginPage;
     protected CoursePage coursePage;
+    protected TrainingPage trainingPage;
+    protected InfoEntryPage infoEntryPage;
 
     @Override
     public void onSelectMenuItem(CommandLineUi ui) {
@@ -35,6 +37,9 @@ public class MainPage extends BasePage {
     public void init() {
         loginPage = new LoginPage(this);
         coursePage = new CoursePage(this);
+        trainingPage = new TrainingPage(this);
+        infoEntryPage = new InfoEntryPage(this);
+
 
         ui.setContentText("Welcome to the system, just play around and enjoy your time here!");
 
@@ -45,6 +50,8 @@ public class MainPage extends BasePage {
         this.menuItems = new ArrayList<>();
 
         this.menuItems.add(coursePage);
+        this.menuItems.add(trainingPage);
+        this.menuItems.add(infoEntryPage);
         if (dc.getLoginUser() == null) this.menuItems.add(loginPage);
         else this.menuItems.add(MenuFuncs.LogoutMenuFunc.getInstance());
     }

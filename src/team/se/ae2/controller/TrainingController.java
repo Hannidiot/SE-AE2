@@ -6,7 +6,7 @@ import team.se.ae2.model.*;
 public class TrainingController {
     protected DataCollection dc = DataCollection.getInstance();
 
-    public boolean addTraining(String trainingName, User trainer, User owner) {
+    public boolean addTraining(Training trainingName, String trainer, User owner) {
         if (!owner.getRole().equals(User.Role.ADMINISTRATOR)) return false;
 
         String trainingCode = "";
@@ -17,9 +17,13 @@ public class TrainingController {
     }
 
     public boolean addTrainee(Training training, Teacher trainee) {
-        // todo: add check here
 
         dc.addTrainee(new Trainee(trainee, training));
+
         return true;
     }
+
+
+    public Training getTrainingByTrainingName(String code)  { return dc.getTrainingByName(code); }
+
 }

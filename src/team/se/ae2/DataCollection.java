@@ -30,6 +30,16 @@ public class DataCollection {
         return null;
     }
 
+    public User getUserByName(String name) {
+        for (User user :
+                this.users) {
+            if (user.getUsername().equals(name)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
     public Course getCourseById(String id) {
         for (Course course :
                 this.courses) {
@@ -50,6 +60,14 @@ public class DataCollection {
         for (Training training :
                 this.trainings) {
             if (training.getTrainingCode().equals(id)) return training;
+        }
+        return null;
+    }
+
+    public Training getTrainingByName(String name) {
+        for (Training training :
+                this.trainings) {
+            if (training.getTrainingName().equals(name)) return training;
         }
         return null;
     }
