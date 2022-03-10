@@ -15,4 +15,14 @@ public class Util {
         else if (model instanceof Training) dc.addTraining((Training) model);
         else if (model instanceof Trainee) dc.addTrainee((Trainee) model);
     }
+
+    /*
+        generate user id from a recorded sequence id db
+     */
+    public static String generateUserId() {
+        SystemVariable systemVariable = dc.getSystemVariable();
+        String code = String.valueOf(Integer.parseInt(systemVariable.getCodeUser()) + 1);
+        systemVariable.setCodeUser(code);
+        return code;
+    }
 }

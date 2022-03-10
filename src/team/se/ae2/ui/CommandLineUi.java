@@ -37,7 +37,7 @@ public class CommandLineUi {
      */
     public void switchTo(IMenuPage page) {
         this.current_page = page;
-        page.registerOnUiController(this);
+        page.beforePageDisplayed(this);
         resolveMenu();
     }
 
@@ -77,11 +77,21 @@ public class CommandLineUi {
         StringBuilder menuBuilder = new StringBuilder();
         num2MenuMap = new Hashtable<>();
         ArrayList<IMenuItem> menuItems = this.current_page.getMenuItems();
+        int cnt = 0;
+
+        if (this.current_page.getParent() != null && this.current_page.getParent() != this.root)
+            addMenuItem(MenuFuncs.Back2ParentFunc.getInstance(), menuItems);
+        if (this.current_page != this.root)
+            addMenuItem(MenuFuncs.Back2RootMenuFunc.getInstance(), menuItems);
+        else
+            addMenuItem(MenuFuncs.ExitProgramMenuFunc.getInstance(), menuItems);
 
         for (int i = 0; i < menuItems.size(); i++) {
 
             // check if the user has the permission to access the page
-            if (dc.getLoginUser() != null && menuItems.get(i) instanceof IPermissionControl) {
+            if (menuItems.get(i) instanceof IPermissionControl) {
+                if (dc.getLoginUser() == null) continue;
+
                 boolean flag = false;
                 User.Role[] permittedRoles = ((IPermissionControl) menuItems.get(i)).getPermittedRoles();
                 for (User.Role role :
@@ -95,14 +105,28 @@ public class CommandLineUi {
                 if (!flag) continue;
             }
 
-            menuBuilder.append(i)
+            menuBuilder.append(cnt)
                     .append(". ")
                     .append(menuItems.get(i).getMenuItemDescription());
             if (menuItems.size() != i + 1) menuBuilder.append("\n");
 
-            num2MenuMap.put(String.valueOf(i), menuItems.get(i));
+            num2MenuMap.put(String.valueOf(cnt), menuItems.get(i));
+            cnt++;
         }
         this.menu.setText(menuBuilder.toString());
+    }
+
+    protected void show() {
+        refresh();
+        printHeader();
+        this.content.print();
+        this.menu.print();
+    }
+
+    protected void addMenuItem(IMenuItem menu, ArrayList<IMenuItem> menuItems) {
+        if (!menuItems.contains(menu)){
+            menuItems.add(menu);
+        }
     }
 
     protected boolean resolveNavigation(String input) {
@@ -111,13 +135,6 @@ public class CommandLineUi {
 
         menuItem.onSelectMenuItem(this);
         return true;
-    }
-
-    public void show() {
-        refresh();
-        printHeader();
-        this.content.print();
-        this.menu.print();
     }
 
     protected void printHeader() {

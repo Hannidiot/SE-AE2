@@ -10,13 +10,13 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        String testFilePath = Util.baseDir + "/resources/test.txt";
+        String testFilePath = Util.baseDir + "/resources/db.txt";
         DataCollection dc = DataCollection.getInstance();
-        List<IDbModel> userList = new ArrayList<>();
-        List<IDbModel> courseList = new ArrayList<>();
-        List<IDbModel> courseRequirements = new ArrayList<>();
-        List<IDbModel> trainings = new ArrayList<>();
-        List<IDbModel> trainees = new ArrayList<>();
+        List<User> userList = new ArrayList<>();
+        List<Course> courseList = new ArrayList<>();
+        List<CourseRequirement> courseRequirements = new ArrayList<>();
+        List<Training> trainings = new ArrayList<>();
+        List<Trainee> trainees = new ArrayList<>();
 
         SystemVariable systemVariable = new SystemVariable("4", "2", "2");
         UiSetting uiSetting = new UiSetting();
@@ -42,9 +42,9 @@ public class Test {
         Trainee trainee = new Trainee(hanni, training);
         trainees.add(trainee);
 
-        FileDataWriter writer = new FileDataWriter();
+        FileDataWriter writer = new FileDataWriter(testFilePath);
         try {
-            writer.open(testFilePath);
+            writer.open();
             writer.write("systemVariable", systemVariable);
             writer.write("uiSetting", uiSetting);
             writer.writeBatch("user", userList);

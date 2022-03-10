@@ -4,5 +4,6 @@ import java.util.ArrayList;
 
 public interface IMenuPage extends IInputResolver {
     ArrayList<IMenuItem> getMenuItems();
-    void registerOnUiController(CommandLineUi ui);
+    void beforePageDisplayed(CommandLineUi ui);
+    IMenuPage getParent();
 }

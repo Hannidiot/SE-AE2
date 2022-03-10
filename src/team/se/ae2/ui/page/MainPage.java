@@ -1,12 +1,26 @@
 package team.se.ae2.ui.page;
 
 import team.se.ae2.DataCollection;
-import team.se.ae2.model.User;
-import team.se.ae2.ui.IPermissionControl;
+import team.se.ae2.ui.CommandLineUi;
 import team.se.ae2.ui.MenuFuncs;
+
+import java.util.ArrayList;
 
 public class MainPage extends BasePage {
     protected DataCollection dc = DataCollection.getInstance();
+    protected LoginPage loginPage;
+    protected CoursePage coursePage;
+
+    @Override
+    public void onSelectMenuItem(CommandLineUi ui) {
+        super.onSelectMenuItem(ui);
+    }
+
+    @Override
+    public void beforePageDisplayed(CommandLineUi ui) {
+        super.beforePageDisplayed(ui);
+        updateMenuItems();
+    }
 
     @Override
     public void resolve(String input) {
@@ -19,13 +33,19 @@ public class MainPage extends BasePage {
 
     @Override
     public void init() {
-        LoginPage loginPage = new LoginPage();
+        loginPage = new LoginPage(this);
+        coursePage = new CoursePage(this);
 
         ui.setContentText("Welcome to the system, just play around and enjoy your time here!");
 
-        this.menuItems.add(MenuFuncs.ExitProgramMenuFunc.getInstance());
+        updateMenuItems();
+    }
 
+    private void updateMenuItems() {
+        this.menuItems = new ArrayList<>();
+
+        this.menuItems.add(coursePage);
         if (dc.getLoginUser() == null) this.menuItems.add(loginPage);
-        if (dc.getLoginUser() != null) this.menuItems.add(MenuFuncs.LogoutMenuFunc.getInstance());
+        else this.menuItems.add(MenuFuncs.LogoutMenuFunc.getInstance());
     }
 }

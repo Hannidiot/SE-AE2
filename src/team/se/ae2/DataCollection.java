@@ -38,6 +38,14 @@ public class DataCollection {
         return null;
     }
 
+    public Course getCourseByName(String name) {
+        for (Course course :
+                this.courses) {
+            if (course.getCourseName().equals(name)) return course;
+        }
+        return null;
+    }
+
     public Training getTrainingById(String id) {
         for (Training training :
                 this.trainings) {

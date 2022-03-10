@@ -11,6 +11,16 @@ public abstract class BasePage implements IMenuPage, IMenuItem {
     protected CommandLineUi ui;
     protected boolean isReady = false;
 
+    protected IMenuPage parent;
+
+    public BasePage() {
+        this.parent = null;
+    }
+
+    public BasePage(IMenuPage parent) {
+        this.parent = parent;
+    }
+
     @Override
     public void onSelectMenuItem(CommandLineUi ui) {
         ui.switchTo(this);
@@ -22,12 +32,16 @@ public abstract class BasePage implements IMenuPage, IMenuItem {
     }
 
     @Override
-    public void registerOnUiController(CommandLineUi ui) {
+    public void beforePageDisplayed(CommandLineUi ui) {
         this.ui = ui;
         if (!isReady) {
             init();
             isReady = true;
         }
+    }
+
+    public IMenuPage getParent() {
+        return parent;
     }
 
     public abstract void init();

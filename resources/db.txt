@@ -1,19 +1,24 @@
 :systemVariable
-code-user=4  code-course=2  code-training=2
+codeUser=3	codeCourse=1	codeTraining=1
+
+:uiSetting
+boxWidth=20
 
 :user
-id=1    username=class_director   password=test   role=classDirector
-id=2    username=admin  password=test   role=administrator
-id=3    username=Hanni  password=test   role=teacher
+id=1	username=classDirector	password=test	role=CLASS_DIRECTOR
+id=2	username=admin	password=test	role=ADMINISTRATOR
+id=3	username=Hanni	password=test	role=TEACHER
 
 :course
-code=1  courseName=Writing  teacher=null
+courseName=Writing	courseCode=1	courseTeacher=null
 
-:course_requirement
-ccode=1 text=a temp requirement text    creator_id=1    create_time=2022-01-02 13:00:00
+:courseRequirement
+requirementText=A template requirement	creator=1	course=1
+requirementText=Requirement from command line	creator=1	course=1
 
 :training
-code=1  time=2022-01-02 13:00:00    creator_id=1    trainer_id
+trainingCode=1	trainingName=test	trainer=3	owner=2
 
 :trainee
-tcode=1 uid=3   is_check_in=true
+trainee=3	training=1
+

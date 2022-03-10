@@ -10,8 +10,13 @@ import java.util.List;
 public class FileDataWriter implements IDataWriter {
     protected FileWriter writer;
     protected BufferedWriter bufferedWriter;
+    protected String path;
 
-    public void open(String path) throws IOException {
+    public FileDataWriter(String path) {
+        this.path = path;
+    }
+
+    public void open() throws IOException {
         writer = new FileWriter(path);
         bufferedWriter = new BufferedWriter(writer);
     }
@@ -29,12 +34,13 @@ public class FileDataWriter implements IDataWriter {
         }
     }
 
-    public void writeBatch(String categoryName, List<IDbModel> dbModels) {
+    public void writeBatch(String categoryName, List dbModels) {
         try {
             bufferedWriter.write(":" + categoryName + "\n");
 
-            for (IDbModel dbModel : dbModels) {
-                bufferedWriter.write(dbModel.getText());
+            for (Object dbModel : dbModels) {
+                if (!(dbModel instanceof IDbModel)) continue;
+                bufferedWriter.write(((IDbModel) dbModel).getText());
                 bufferedWriter.newLine();
             }
 

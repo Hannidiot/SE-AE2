@@ -62,4 +62,28 @@ public class MenuFuncs {
             return "Logout";
         }
     }
+
+    public static class Back2ParentFunc implements IMenuItem {
+        private static final Back2ParentFunc instance = new Back2ParentFunc();
+        private Back2ParentFunc() {}
+
+        public static Back2ParentFunc getInstance() {
+            return instance;
+        }
+
+        @Override
+        public void onSelectMenuItem(CommandLineUi ui) {
+            if (ui.current_page.getParent() == null) {
+                ui.setContentText("No last page recorded");
+            }
+            else {
+                ui.switchTo(ui.current_page.getParent());
+            }
+        }
+
+        @Override
+        public String getMenuItemDescription() {
+            return "Back To Last Page";
+        }
+    }
 }
