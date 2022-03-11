@@ -29,7 +29,7 @@ public class TraineeAddPage extends BasePage implements IPermissionControl {
         if (controller.addTrainee(training, (Teacher) teacher)) {
             this.ui.setContentText("Add trainee success");
         }
-        this.ui.setContentText("Add trainee failed");
+        else this.ui.setContentText("Add trainee failed");
     }
 
     @Override

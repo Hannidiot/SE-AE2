@@ -1,5 +1,5 @@
 :systemVariable
-codeUser=3	codeCourse=1	codeTraining=2
+codeUser=4	codeCourse=1	codeTraining=2
 
 :uiSetting
 boxWidth=20
@@ -8,6 +8,7 @@ boxWidth=20
 id=1	username=classDirector	password=test	role=CLASS_DIRECTOR
 id=2	username=admin	password=test	role=ADMINISTRATOR
 id=3	username=Hanni	password=test	role=TEACHER
+id=4	username=TestTeacher	password=test	role=TEACHER
 
 :course
 courseName=Writing	courseCode=1	courseTeacher=null
@@ -23,4 +24,5 @@ trainingCode=2	trainingName=test training	trainer=3	owner=2
 
 :trainee
 trainee=3	training=1
+trainee=3	training=2
 
