@@ -1,5 +1,5 @@
 :systemVariable
-codeUser=3	codeCourse=1	codeTraining=1
+codeUser=3	codeCourse=1	codeTraining=2
 
 :uiSetting
 boxWidth=20
@@ -19,6 +19,7 @@ requirementText=no course req	creator=1	course=1
 
 :training
 trainingCode=1	trainingName=test	trainer=3	owner=2
+trainingCode=2	trainingName=test training	trainer=3	owner=2
 
 :trainee
 trainee=3	training=1

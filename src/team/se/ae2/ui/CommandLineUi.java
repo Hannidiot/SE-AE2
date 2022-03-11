@@ -37,6 +37,7 @@ public class CommandLineUi {
      */
     public void switchTo(IMenuPage page) {
         this.current_page = page;
+        setContentText("");
         page.beforePageDisplayed(this);
         resolveMenu();
     }

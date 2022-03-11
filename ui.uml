@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>team.se.ae2.ui</OriginalElement>
+  <nodes>
+    <node x="2086.0" y="570.0">team.se.ae2.ui.MenuFuncs.Back2ParentFunc</node>
+    <node x="1148.5" y="1236.5">team.se.ae2.ui.page.CourseListPage</node>
+    <node x="2466.0" y="250.0">team.se.ae2.ui.MenuFuncs.Back2RootMenuFunc</node>
+    <node x="-11.5" y="916.5">team.se.ae2.ui.page.TrainingAddPage</node>
+    <node x="2086.0" y="81.0">team.se.ae2.ui.IMenuItem</node>
+    <node x="606.0" y="2192.5">team.se.ae2.ui.UiBase</node>
+    <node x="980.0" y="592.5">team.se.ae2.ui.IPermissionControl</node>
+    <node x="1378.5" y="110.0">team.se.ae2.ui.IMenuPage</node>
+    <node x="1268.5" y="996.5">team.se.ae2.ui.page.EnrollPage</node>
+    <node x="1886.0" y="738.5">team.se.ae2.ui.MenuFuncs.LogoutMenuFunc</node>
+    <node x="1598.5" y="305.5">team.se.ae2.ui.page.BasePage</node>
+    <node x="808.5" y="1716.5">team.se.ae2.ui.page.TraineeAddPage</node>
+    <node x="500.0" y="587.5">team.se.ae2.ui.page.LoginPage</node>
+    <node x="1390.0" y="756.5">team.se.ae2.ui.page.CoursePage</node>
+    <node x="138.5" y="581.5">team.se.ae2.ui.page.MainPage</node>
+    <node x="2788.5" y="105.0">team.se.ae2.ui.MenuFuncs</node>
+    <node x="-12.0" y="2191.5">team.se.ae2.ui.CommandLineUi</node>
+    <node x="462.5" y="2359.0">team.se.ae2.ui.UiDisplayElement</node>
+    <node x="755.5" y="2348.0">team.se.ae2.ui.UiInputElement</node>
+    <node x="2306.0" y="410.0">team.se.ae2.ui.MenuFuncs.ExitProgramMenuFunc</node>
+    <node x="950.0" y="1476.5">team.se.ae2.ui.page.TrainingPage</node>
+    <node x="1454.0" y="-7.5">team.se.ae2.ui.IInputResolver</node>
+    <node x="668.5" y="1956.5">team.se.ae2.ui.page.CourseReqAddPage</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="team.se.ae2.ui.UiDisplayElement" target="team.se.ae2.ui.UiBase" relationship="GENERALIZATION">
+      <point x="0.0" y="-61.0" />
+      <point x="560.0" y="2320.0" />
+      <point x="700.0" y="2320.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.CourseListPage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="-20.0" y="-83.5" />
+      <point x="1240.0" y="720.0" />
+      <point x="1080.0" y="720.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.TraineeAddPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="20.0" y="-83.5" />
+      <point x="940.0" y="1680.0" />
+      <point x="1840.0" y="1680.0" />
+      <point x="1840.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.LoginPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="0.0" y="-72.5" />
+      <point x="620.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.BasePage" target="team.se.ae2.ui.IMenuItem" relationship="REALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="1760.0" y="240.0" />
+      <point x="1800.0" y="240.0" />
+      <point x="1800.0" y="220.0" />
+      <point x="2240.0" y="220.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.TrainingAddPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="100.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.ExitProgramMenuFunc" target="team.se.ae2.ui.IMenuItem" relationship="REALIZATION">
+      <point x="-20.0" y="-50.0" />
+      <point x="2440.0" y="220.0" />
+      <point x="2240.0" y="220.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.TrainingPage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.CourseListPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="1260.0" y="1200.0" />
+      <point x="1800.0" y="1200.0" />
+      <point x="1800.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.CoursePage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="-20.0" y="-83.5" />
+      <point x="1520.0" y="720.0" />
+      <point x="1080.0" y="720.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.CourseReqAddPage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="780.0" y="720.0" />
+      <point x="1080.0" y="720.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.Back2ParentFunc" target="team.se.ae2.ui.IMenuItem" relationship="REALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.TrainingPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="20.0" y="-83.5" />
+      <point x="1100.0" y="1440.0" />
+      <point x="1820.0" y="1440.0" />
+      <point x="1820.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.CoursePage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="1540.0" y="580.0" />
+      <point x="1720.0" y="580.0" />
+      <point x="1720.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.Back2RootMenuFunc" target="team.se.ae2.ui.IMenuItem" relationship="REALIZATION">
+      <point x="-20.0" y="-50.0" />
+      <point x="2600.0" y="220.0" />
+      <point x="2240.0" y="220.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.TraineeAddPage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="920.0" y="720.0" />
+      <point x="1080.0" y="720.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.EnrollPage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="-20.0" y="-83.5" />
+      <point x="1360.0" y="720.0" />
+      <point x="1080.0" y="720.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.CourseReqAddPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="20.0" y="-83.5" />
+      <point x="800.0" y="1920.0" />
+      <point x="1860.0" y="1920.0" />
+      <point x="1860.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.Back2ParentFunc" target="team.se.ae2.ui.MenuFuncs" relationship="INNER_CLASS">
+      <point x="20.0" y="-50.0" />
+      <point x="2260.0" y="540.0" />
+      <point x="2900.0" y="540.0" />
+      <point x="2900.0" y="200.0" />
+      <point x="2860.0" y="200.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.LogoutMenuFunc" target="team.se.ae2.ui.MenuFuncs" relationship="INNER_CLASS">
+      <point x="20.0" y="-61.5" />
+      <point x="2060.0" y="700.0" />
+      <point x="2920.0" y="700.0" />
+      <point x="2920.0" y="200.0" />
+      <point x="2860.0" y="200.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.EnrollPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="0.0" y="-83.5" />
+      <point x="1380.0" y="960.0" />
+      <point x="1760.0" y="960.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.UiInputElement" target="team.se.ae2.ui.UiBase" relationship="GENERALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="880.0" y="2320.0" />
+      <point x="700.0" y="2320.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.IMenuPage" target="team.se.ae2.ui.IInputResolver" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.BasePage" target="team.se.ae2.ui.IMenuPage" relationship="REALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="1760.0" y="240.0" />
+      <point x="1540.0" y="240.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.MainPage" target="team.se.ae2.ui.page.BasePage" relationship="GENERALIZATION">
+      <point x="0.0" y="-138.5" />
+      <point x="300.0" y="560.0" />
+      <point x="1760.0" y="560.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.Back2RootMenuFunc" target="team.se.ae2.ui.MenuFuncs" relationship="INNER_CLASS">
+      <point x="0.0" y="-50.0" />
+      <point x="2620.0" y="220.0" />
+      <point x="2800.0" y="220.0" />
+      <point x="2800.0" y="200.0" />
+      <point x="2860.0" y="200.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.page.TrainingAddPage" target="team.se.ae2.ui.IPermissionControl" relationship="REALIZATION">
+      <point x="20.0" y="-83.5" />
+      <point x="120.0" y="880.0" />
+      <point x="760.0" y="880.0" />
+      <point x="760.0" y="720.0" />
+      <point x="1080.0" y="720.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.LogoutMenuFunc" target="team.se.ae2.ui.IMenuItem" relationship="REALIZATION">
+      <point x="0.0" y="-61.5" />
+      <point x="2040.0" y="220.0" />
+      <point x="2240.0" y="220.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="team.se.ae2.ui.MenuFuncs.ExitProgramMenuFunc" target="team.se.ae2.ui.MenuFuncs" relationship="INNER_CLASS">
+      <point x="0.0" y="-50.0" />
+      <point x="2460.0" y="380.0" />
+      <point x="2820.0" y="380.0" />
+      <point x="2820.0" y="200.0" />
+      <point x="2860.0" y="200.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Directed (Bottom to Top)" zoom="0.6336504299464161" showDependencies="false" x="1116.1427845897292" y="551.8348586580678" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

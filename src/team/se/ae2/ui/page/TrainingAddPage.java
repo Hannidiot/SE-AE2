@@ -42,6 +42,6 @@ public class TrainingAddPage extends BasePage implements IPermissionControl {
 
     @Override
     public void init() {
-        this.ui.setDefaultHint("Please input training code");
+        this.ui.setDefaultHint("Please input training name");
     }
 }
