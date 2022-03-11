@@ -9,13 +9,13 @@ import team.se.ae2.model.User;
 import team.se.ae2.ui.IMenuPage;
 import team.se.ae2.ui.IPermissionControl;
 
-public class InfoEntryPage extends BasePage implements IPermissionControl {
+public class EnrollPage extends BasePage implements IPermissionControl {
     protected EnrollController controller = new EnrollController();
     protected DataCollection dc = DataCollection.getInstance();
 
-    public InfoEntryPage() {}
+    public EnrollPage() {}
 
-    public InfoEntryPage(IMenuPage parent) { super(parent); }
+    public EnrollPage(IMenuPage parent) { super(parent); }
 
     @Override
     public void init() {this.ui.setDefaultHint("Please input teacher name");}
@@ -32,7 +32,7 @@ public class InfoEntryPage extends BasePage implements IPermissionControl {
 
 
     @Override
-    public String getMenuItemDescription() { return "Add a new teacher information";}
+    public String getMenuItemDescription() { return "Add a new teacher";}
 
     @Override
     public User.Role[] getPermittedRoles() {

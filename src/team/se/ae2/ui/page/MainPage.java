@@ -11,7 +11,7 @@ public class MainPage extends BasePage {
     protected LoginPage loginPage;
     protected CoursePage coursePage;
     protected TrainingPage trainingPage;
-    protected InfoEntryPage infoEntryPage;
+    protected EnrollPage infoEntryPage;
 
     @Override
     public void onSelectMenuItem(CommandLineUi ui) {
@@ -38,7 +38,7 @@ public class MainPage extends BasePage {
         loginPage = new LoginPage(this);
         coursePage = new CoursePage(this);
         trainingPage = new TrainingPage(this);
-        infoEntryPage = new InfoEntryPage(this);
+        infoEntryPage = new EnrollPage(this);
 
 
         ui.setContentText("Welcome to the system, just play around and enjoy your time here!");

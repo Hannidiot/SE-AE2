@@ -34,7 +34,7 @@ public class TraineeAddPage extends BasePage implements IPermissionControl {
 
     @Override
     public String getMenuItemDescription() {
-        return null;
+        return "Add a new trainee";
     }
 
     @Override

@@ -38,6 +38,7 @@ public abstract class BasePage implements IMenuPage, IMenuItem {
             init();
             isReady = true;
         }
+        this.ui.setContentText("");
     }
 
     public IMenuPage getParent() {
