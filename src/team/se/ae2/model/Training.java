@@ -19,9 +19,6 @@ public class Training implements IDbModel {
         this.owner = owner;
     }
 
-    public Training(String trainingCode, Training trainingName, String trainer, Administrator owner) {
-    }
-
     public String getTrainingCode() {
         return trainingCode;
     }

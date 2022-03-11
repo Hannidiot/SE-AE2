@@ -22,13 +22,9 @@ public class TrainingAddPage extends BasePage implements IPermissionControl {
 
     @Override
     public void resolve(String trainingName) {
-        Training training = controller.getTrainingByTrainingName(trainingName);
-        if (training == null) {
-            ui.setContentText("No such training"); return;
-        }
-
-        String addTraining = this.ui.getInput("Please input training name");
-        if (controller.addTraining(training, addTraining, dc.getLoginUser())) {
+        String trainerName = this.ui.getInput("Please input the trainer name");
+        User trainer = dc.getUserByName(trainerName);
+        if (controller.addTraining(trainingName, trainer, dc.getLoginUser())) {
             ui.setContentText("add training  success");
         }
         else ui.setContentText("add training failed");

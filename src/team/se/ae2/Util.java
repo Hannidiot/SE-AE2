@@ -25,4 +25,11 @@ public class Util {
         systemVariable.setCodeUser(code);
         return code;
     }
+
+    public static String generateTrainingId() {
+        SystemVariable systemVariable = dc.getSystemVariable();
+        String code = String.valueOf(Integer.parseInt(systemVariable.getCodeTraining()) + 1);
+        systemVariable.setCodeTraining(code);
+        return code;
+    }
 }

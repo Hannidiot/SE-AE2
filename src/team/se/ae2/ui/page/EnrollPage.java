@@ -24,7 +24,7 @@ public class EnrollPage extends BasePage implements IPermissionControl {
     public void resolve(String userName) {
         String password = this.ui.getInput("Please input password");
 
-        if (controller.enrollNewTeacher(Util.generateUserId(), userName, password)) {
+        if (controller.enrollNewTeacher(userName, password)) {
             ui.setContentText("add teacher Information success");
         }
         else ui.setContentText("add teacher information failed");
